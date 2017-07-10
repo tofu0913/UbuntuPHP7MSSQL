@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get -y install wget net-tools curl apt-transport-https
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 RUN curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list > /etc/apt/sources.list.d/mssql-server.list
-RUN apt-get -y install php7.0 libapache2-mod-php7.0 mcrypt php7.0-mcrypt php-mbstring php-pear php7.0-dev apache2
+RUN apt-get -y install php7.0 libapache2-mod-php7.0 mcrypt php7.0-mcrypt php-mbstring php-pear php7.0-dev apache2 php7.0-gd php7.0-curl php7.0-zip 
 RUN curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-tools.list
 RUN apt-get update
 RUN ACCEPT_EULA=Y apt-get install -y mssql-tools
